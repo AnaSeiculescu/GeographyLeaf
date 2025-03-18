@@ -11,9 +11,9 @@
         <form action="/home/geoleaf" method="get" th:object="${country}">
             <select name="name">
                 <option value="0">--Select a country--</option>
-                <option th:each="name: ${countryList}"
-                    th:value="${name}"
-                    th:text="${name}"
+                <option th:each="country: ${countryList}"
+                    th:value="${country.getSimplifiedName()}"
+                    th:text="${country.getSimplifiedName()}"
                     th:field="*{name}">
                 </option>
             </select>

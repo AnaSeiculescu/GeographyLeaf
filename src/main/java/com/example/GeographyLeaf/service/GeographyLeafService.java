@@ -21,9 +21,4 @@ public class GeographyLeafService {
 		return Arrays.asList(response.getBody());
 	}
 
-//	public List<Country> getAllCountryNames(String country) {
-//		RestTemplate restTemplate = new RestTemplate();
-//		ResponseEntity<Country[]> response = restTemplate.getForEntity(ALL_COUNTRIES_API_URL + country, Country[].class);
-//		return Arrays.asList(response.getBody());
-//	}
 }
