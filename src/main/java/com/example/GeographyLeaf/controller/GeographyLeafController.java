@@ -25,7 +25,9 @@ public class GeographyLeafController {
 	}
 
 	@GetMapping("/geoleaf")
-	public String getCountryInfoGeoLeafPage(@RequestParam(required = false) String name, Model model) {
+	public String getCountryByName(@RequestParam(required = false) String name, Model model) {
+		Country selectedCountry = geographyLeafService.getCountryByName(name);
+		model.addAttribute("country", selectedCountry);
 		model.addAttribute("countryName", name);
 		return "/geographyLeaf";
 	}

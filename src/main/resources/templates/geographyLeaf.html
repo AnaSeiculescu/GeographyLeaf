@@ -7,8 +7,11 @@
 <body>
 
     <div style="text-align:center">
-        <h3 style="color:green">You selected: <span style="color: blue;" th:text="${countryName}"></span></h3>
+        <h3 style="color:green">You selected: <span style="color: red;" th:text="${countryName}"></span></h3>
 
+        <p>Official name: <span th:text="${country.getName().getOfficial()}" style="color: blue;"></span></p>
+        <p>Capital: <span th:text="${country.getCapital()[0]}" style="color: blue;"></span></p>
+        <p>Area: <span th:text="${country.getArea()}" style="color: blue;"></span></p>
     </div>
 
 
